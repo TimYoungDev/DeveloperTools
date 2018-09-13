@@ -1,0 +1,35 @@
+<div class="row mt-4">
+  <div class="card w-100">
+    <div class="card-body">
+      <h5 class="card-title">Calculate HMAC SHA256 Hash</h5>
+
+      <form>
+        <div class="form-row">
+
+          <div class="col-md-10">
+            <div class="form-group">
+              <label for="inputKeySecret">Key Secret</label>
+              <input type="text" class="form-control" id="inputKeySecret" placeholder="Secret" [(ngModel)]="keySecret" name="keySecret"/>
+            </div>
+
+            <div class="form-group">
+              <label for="inputMessageText">Message Text</label>
+              <textarea class="form-control" id="inputMessageText" [(ngModel)]="messageText" name="messageText"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="inputHashValue">Result</label>
+              <input type="text" class="form-control" id="inputHashValue" readonly placeholder="Hash Result" [value]="hashResult" />
+            </div>
+          </div>
+
+          <div class="col-md-2 align-self-end">
+            <button class="btn btn-primary mb-3" (click)="onCalculateHmac256Hash()">Calculate</button>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
